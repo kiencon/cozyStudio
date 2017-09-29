@@ -51,6 +51,26 @@ body,h1,h2,h3,h4,p,a {
   margin: 0;
 }
 
+.move {
+    font-size: 20px;
+}
+
+i.fa.fa-chevron-right.move {
+    right: 11px!important;
+}
+
+i.fa.fa-chevron-left.move {
+    left: 7px;
+}
+
+i.fa.fa-chevron-left.move, i.fa.fa-chevron-right.move {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-68%);
+    z-index: 50;
+    color: #716f6f;
+}
+
 .container.wrap-footer {
     color: #848484;
 }
@@ -93,41 +113,9 @@ section#promotion {
     float: right;
     width: 70%;
 }
-i.fa.fa-angle-left, .fa-angle-right {
-    color: #fff;
-    font-size: 44px;
-    position: absolute;
-    top: -4px;
-}
-
-i.fa.fa-angle-left {
-    left: 10px;
-}
-
-.fa-angle-right {
-    right: 10px;
-}
 
 .container.wrap-carousel {
     position: relative;
-}
-
-.owl-prev, .owl-next {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.64);
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-.owl-next {
-    right: 12px;
-}
-
-.owl-prev {
-    left: 12px;
 }
 nav.navbar.navbar-default {
     background: transparent;
@@ -275,12 +263,6 @@ img#tag {
 }
 
 @media only screen and (min-width: 1300px){
-  div#item-carousel:hover .owl-next, div#item-carousel:hover .owl-prev {
-    display: block;
-  }
-  .owl-next, .owl-prev {
-      display: none;
-  }
   img#tag {
     display: block;
     position: absolute;
@@ -351,10 +333,6 @@ img#tag {
     width: 50%;
   }
 }
-
-/*
-
- */
 .address li {
     font-size: 13px;
     text-align: center;
@@ -370,7 +348,6 @@ ul.nav.menu-footer li {font-size: 13px;padding: 5px;}
 section.address {
     display: flex;
 }
-
 section.address ul {
     display: flex;
     justify-content: center;
@@ -412,6 +389,9 @@ section.meu-footer ul li {
     display: flex;
 }
 
+#wowslider-container1 .ws_images {
+  border: none!important;
+}
 
 /* ==========================================================================
    Responsive CSS Landscape Mobile
@@ -448,32 +428,6 @@ section.meu-footer ul li {
   }
   .navbar-nav {
     height: 260px;
-  }
-  .owl-next {
-    right: 12px;
-  }
-  .owl-prev {
-    left: 12px;
-  }
-  .owl-prev, .owl-next {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.64);
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-  }
-  i.fa.fa-angle-left, .fa-angle-right {
-    font-size: 36px;
-  }
-
-  i.fa.fa-angle-left {
-      left: 6px;
-  }
-
-  i.fa.fa-angle-right {
-      right: 6px;
   }
   .container.wrap-promotion .img-sale img {
     width: 50%;
@@ -520,35 +474,14 @@ section.meu-footer ul li {
   .navbar-nav {
     height: 260px;
   }
-  .owl-prev, .owl-next {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.64);
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-  }
-  .owl-next {
-      right: 0;
-  }
-  i.fa.fa-angle-left, .fa-angle-right {
-    color: #fff;
-    font-size: 25px;
-    position: absolute;
-    top: -3px;
-  }
-  i.fa.fa-angle-left {
-      left: 4px;
-  }
-  .fa-angle-right {
-      right: 4px;
-  }
   .container.wrap-promotion .img-sale img {
     width: 100%;
   }
   .container.social-bar .row {
     text-align: center;
+  }
+  .move {
+    display: none;
   }
 }
 
